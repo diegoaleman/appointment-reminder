@@ -1,0 +1,19 @@
+<h1>Physicians</h1>
+
+<table class="table">
+  <thead class="thead-light">
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @physicians.each do |physician| %>
+      <tr>
+        <td><%= physician.name %></td>
+        <td><%= physician.email %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
