@@ -22,4 +22,9 @@
     <br/>
     <%= link_to 'Resend reminder to physician', appointment_send_reminder_path(@appointment, :option => 'physician'), method: :post, remote: true %>
   <% end %>
+
+  <div class="form-group">
+    <%= link_to "Appointments List", appointments_path, class: "btn btn-dark" %>
+    <%= link_to "Edit", edit_appointment_path(@appointment), class: "btn btn-primary" %>
+  </div>
 </form>
