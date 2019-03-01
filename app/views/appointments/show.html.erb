@@ -16,4 +16,10 @@
     <input class="form-check-input" type="checkbox" <%= 'checked' if @appointment.reminder %> disabled>
     <label class="form-check-label">Reminder</label>
   </div>
+
+  <% if @appointment.reminder %>
+    <%= link_to 'Resend reminder to patient', appointment_send_reminder_path(@appointment, :option => 'patient'), method: :post, remote: true %>
+    <br/>
+    <%= link_to 'Resend reminder to physician', appointment_send_reminder_path(@appointment, :option => 'physician'), method: :post, remote: true %>
+  <% end %>
 </form>

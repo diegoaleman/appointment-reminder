@@ -1,9 +1,9 @@
 class FakeReminder
-  def send_reminder(type, email, doctor_name, patient_name)
+  def send_reminder(type, email, name)
     if type.eql?('patient')
-      puts "Sending email to #{email} ... remember your appointment with dr #{doctor_name}"
+      puts "Sending email to #{email} ... remember your appointment with dr #{name}"
     else
-      puts "Sending email to #{email} ... remember your appointment with the patient: #{patient_name}"
+      puts "Sending email to #{email} ... remember your appointment with the patient: #{name}"
     end
   end
 end

@@ -42,6 +42,11 @@ class AppointmentsController < ApplicationController
     redirect_to appointments_path
   end
 
+  def send_reminder
+    @appointment = Appointment.find(params[:appointment_id])
+    @appointment.send_reminder(params[:option])
+  end
+
   private
 
   def appointment_params
